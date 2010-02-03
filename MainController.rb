@@ -8,6 +8,7 @@ require "pathname"
 
 class MainController < NSWindowController
   ALLOWED_FILE_EXTENSIONS = %w(mov mkv avi mpg mpeg mp4 m4v ogm wmv)
+  ALLOWED_FILE_EXT_REGEXP = /\.(#{ALLOWED_FILE_EXTENSIONS.join('|')})$/
   
   attr_accessor :open_folder_button, :file_list, :file_summary, :file_table, :recursive
   
@@ -33,32 +34,25 @@ class MainController < NSWindowController
   end
   
   def set_files(urls)
-    urls = if recursive?
-      expand_urls(urls).flatten.compact
-    else
-      urls.reject(&:directory?)
-    end
-  
     file_list.clear
-    file_list.push(*urls)
-    file_table.reloadData
     
-    @file_summary.stringValue = "#{urls.size} Entries"
-  end
-  
-  # TODO: Limit the number of files or depth to
-  #       a reasonable number as this is a recursive
-  #       method and could get out of hand
-  def expand_urls(urls)
-    urls.map do |url|
-      if url.directory?
-        expand_urls(url.children, depth + 1) if depth <= 5
-      elsif ALLOWED_FILE_EXTENSIONS.include? url.extname.gsub(/\./,'')
-        url
-      else
-        nil
+    urls.each do |url|
+      url.find do |file|
+        Find.prune if file.basename.to_s =~ /^\._/
+      
+        if file.directory?
+          Find.prune unless recursive?
+        else
+          if file.to_s =~ ALLOWED_FILE_EXT_REGEXP
+            file_list.push(file)
+          end
+        end       
       end
     end
+    
+    file_table.reloadData
+    
+    @file_summary.stringValue = "#{file_list.size} Entries"
   end
   
   def recursive?
