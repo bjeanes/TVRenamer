@@ -13,15 +13,14 @@ class FileTableController < NSController
 	end
 	
 	def tableView(table, objectValueForTableColumn: column, row: row)
-		row  = file_list[row]
-		path = row.path.to_s
-		name = row.lastPathComponent.to_s
+		path = file_list[row].to_s
+		name = File.basename(path)
 
 		case column.identifier
 			when "original" then name
-			when "new"		then name.gsub(/\./,' ')
-			when "path"		then path
+			when "new"		  then name.gsub(/\./,' ')
+			when "path"		  then path
 		end
-	end
+  end
 	
 end
