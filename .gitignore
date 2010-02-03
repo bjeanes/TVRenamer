@@ -1,4 +1,4 @@
-/Audioscrobbler.xcodeproj/*.mode*v3
-/Audioscrobbler.xcodeproj/*.pbxuser
+*.mode*v3
+*.pbxuser
 /build/
 .DS_Store
