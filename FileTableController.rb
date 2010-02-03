@@ -9,11 +9,7 @@ class FileTableController < NSController
 	
 	# Data Source
 	def numberOfRowsInTableView(table)
-		if table == file_table
-			file_list.size
-		else
-			0
-		end
+		file_list.size
 	end
 	
 	def tableView(table, objectValueForTableColumn: column, row: row)
@@ -21,17 +17,10 @@ class FileTableController < NSController
 		path = row.path.to_s
 		name = row.lastPathComponent.to_s
 
-		case column
-		when table["status"]
-			""
-		when table["original"]
-			name
-		when table["new"]
-			name.gsub(/\./,' ')
-		when table["path"]
-			path
-		else
-			""
+		case column.identifier
+			when "original" then name
+			when "new"		then name.gsub(/\./,' ')
+			when "path"		then path
 		end
 	end
 	
