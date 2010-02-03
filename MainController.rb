@@ -12,10 +12,9 @@ class MainController < NSWindowController
   attr_accessor :open_folder_button, :file_list, :file_summary, :file_table, :recursive
   
   def open_folder_button_pressed(sender)
-    if open_dialog.runModal == NSOKButton
-      urls = open_dialog.URLs.map { |u| Pathname.new(u.path) }
-      set_files(urls)
-      @file_summary.stringValue = "#{urls.size} Entries"
+    result = open_dialog.runModalForDirectory("~/Movies", file: nil, types: ALLOWED_FILE_EXTENSIONS)
+    if result == NSOKButton
+      set_files(open_dialog.URLs.map { |u| Pathname.new(u.path) })
     end
   end
   
@@ -23,19 +22,19 @@ class MainController < NSWindowController
   def open_dialog
     @dialog ||= begin
       d = NSOpenPanel.openPanel
-      d.delegate                = self
+      #d.delegate                = self
       d.canChooseFiles          = true
       d.canChooseDirectories    = true
       d.allowsMultipleSelection = true
-      d.allowedFileTypes        = ALLOWED_FILE_EXTENSIONS
-      d.directoryURL            = NSURL.fileURLWithPath("~/Movies")
+      #d.allowedFileTypes        = ALLOWED_FILE_EXTENSIONS
+      #d.directoryURL            = NSURL.fileURLWithPath("~/Movies")
       d
     end
   end
   
   def set_files(urls)
     urls = if recursive?
-      expand_urls(urls)
+      expand_urls(urls).flatten.compact
     else
       urls.reject(&:directory?)
     end
@@ -43,16 +42,23 @@ class MainController < NSWindowController
     file_list.clear
     file_list.push(*urls)
     file_table.reloadData
+    
+    @file_summary.stringValue = "#{urls.size} Entries"
   end
   
+  # TODO: Limit the number of files or depth to
+  #       a reasonable number as this is a recursive
+  #       method and could get out of hand
   def expand_urls(urls)
     urls.map do |url|
       if url.directory?
-        expand_urls(url.children)
-      else
+        expand_urls(url.children, depth + 1) if depth <= 5
+      elsif ALLOWED_FILE_EXTENSIONS.include? url.extname.gsub(/\./,'')
         url
+      else
+        nil
       end
-    end.flatten
+    end
   end
   
   def recursive?
