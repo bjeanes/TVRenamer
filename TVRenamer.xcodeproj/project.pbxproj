@@ -47,6 +47,8 @@
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
 		6C7C4EC311196AD9003E0CC8 /* MainController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C4EC211196AD9003E0CC8 /* MainController.rb */; };
+		6C7C4EE111197498003E0CC8 /* FileTableController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C4EE011197498003E0CC8 /* FileTableController.rb */; };
+		6C7C4F7311199598003E0CC8 /* NSTableView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C4F7211199598003E0CC8 /* NSTableView.rb */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -76,7 +78,9 @@
 		2BFA9DA610CDF852007972A1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4DE339F60D74FCDD00ADB6EE /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		4DE3BE130D8651D900ECA448 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
-		6C7C4EC211196AD9003E0CC8 /* MainController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MainController.rb; sourceTree = "<group>"; };
+		6C7C4EC211196AD9003E0CC8 /* MainController.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = MainController.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		6C7C4EE011197498003E0CC8 /* FileTableController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FileTableController.rb; sourceTree = "<group>"; };
+		6C7C4F7211199598003E0CC8 /* NSTableView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = NSTableView.rb; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TVRenamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVRenamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				6C7C4EC211196AD9003E0CC8 /* MainController.rb */,
+				6C7C4EE011197498003E0CC8 /* FileTableController.rb */,
+				6C7C4F7211199598003E0CC8 /* NSTableView.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
 				2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */,
 				6C7C4EC311196AD9003E0CC8 /* MainController.rb in Resources */,
+				6C7C4EE111197498003E0CC8 /* FileTableController.rb in Resources */,
+				6C7C4F7311199598003E0CC8 /* NSTableView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
