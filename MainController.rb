@@ -19,6 +19,11 @@ class MainController < NSWindowController
     end
   end
   
+  def clear(sender)
+    file_list.clear
+    file_table.reloadData
+  end
+  
   private
   def open_dialog
     @dialog ||= begin
@@ -34,8 +39,6 @@ class MainController < NSWindowController
   end
   
   def set_files(urls)
-    file_list.clear
-    
     urls.each do |url|
       url.find do |file|
         Find.prune if file.basename.to_s =~ /^\._/
@@ -46,7 +49,7 @@ class MainController < NSWindowController
           if file.to_s =~ ALLOWED_FILE_EXT_REGEXP
             file_list.push(file)
           end
-        end       
+        end
       end
     end
     
