@@ -17,7 +17,7 @@ class FileList < NSArrayController
     open do |dialog|
       dialog.URLs.each do |url|
         url.to_pathname.find do |file|          
-          if file.to_s =~ FILE_EXT_REGEXP && !file.
+          if file.to_s =~ FILE_EXT_REGEXP && !file.directory?
             Find.prune if file.basename.to_s =~ /^\./
             addObject(file.to_episode)
           end
