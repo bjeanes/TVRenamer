@@ -18,8 +18,4 @@ class Episode < Pathname
   def new_name
     @new_name ||= original_name.gsub(/(.)./, '\1')
   end
-  
-  def method_missing(method, *args, &block)
-    "foo"
-  end
 end
