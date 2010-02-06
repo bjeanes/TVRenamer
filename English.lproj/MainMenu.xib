@@ -834,7 +834,7 @@
 						</object>
 						<object class="NSScrollView" id="437881420">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">274</int>
+							<int key="NSvFlags">4370</int>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSClipView" id="406729963">
@@ -844,7 +844,7 @@
 										<bool key="EncodedWithXMLCoder">YES</bool>
 										<object class="NSTableView" id="50854687">
 											<reference key="NSNextResponder" ref="406729963"/>
-											<int key="NSvFlags">256</int>
+											<int key="NSvFlags">4352</int>
 											<string key="NSFrameSize">{558, 367}</string>
 											<reference key="NSSuperview" ref="406729963"/>
 											<bool key="NSEnabled">YES</bool>
@@ -1049,7 +1049,7 @@
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="437881420"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSCurValue">0.20430107526881722</double>
+									<double key="NSCurValue">0.18279569892473119</double>
 									<double key="NSPercent">0.99819494584837543</double>
 								</object>
 								<object class="NSClipView" id="382708925">
@@ -1103,13 +1103,13 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
-						<object class="NSButton" id="18463525">
+						<object class="NSButton" id="960374438">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">289</int>
 							<string key="NSFrame">{{485, 18}, {95, 19}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="464345448">
+							<object class="NSButtonCell" key="NSCell" id="53399517">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Rename All</string>
@@ -1118,7 +1118,7 @@
 									<double key="NSSize">12</double>
 									<int key="NSfFlags">16</int>
 								</object>
-								<reference key="NSControlView" ref="18463525"/>
+								<reference key="NSControlView" ref="960374438"/>
 								<int key="NSButtonFlags">-2038152961</int>
 								<int key="NSButtonFlags2">164</int>
 								<string key="NSAlternateContents"/>
@@ -1577,7 +1577,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">perform_rename:</string>
 						<reference key="source" ref="940147636"/>
-						<reference key="destination" ref="18463525"/>
+						<reference key="destination" ref="960374438"/>
 					</object>
 					<int key="connectionID">469</int>
 				</object>
@@ -2198,7 +2198,7 @@
 							<reference ref="235110730"/>
 							<reference ref="475342700"/>
 							<reference ref="502807625"/>
-							<reference ref="18463525"/>
+							<reference ref="960374438"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2351,17 +2351,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">466</int>
-						<reference key="object" ref="18463525"/>
+						<reference key="object" ref="960374438"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="464345448"/>
+							<reference ref="53399517"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">467</int>
-						<reference key="object" ref="464345448"/>
-						<reference key="parent" ref="18463525"/>
+						<reference key="object" ref="53399517"/>
+						<reference key="parent" ref="960374438"/>
 					</object>
 				</object>
 			</object>
