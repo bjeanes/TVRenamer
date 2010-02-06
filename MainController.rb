@@ -9,9 +9,7 @@ class MainController < NSWindowController
 
   def perform_rename(sender)
     file_list.arrangedObjects.each do |episode|
-      Dir.chdir(episode.dirname) do
-        episode.rename(episode.new_name)
-      end
+      episode.rename
     end
   end
 end

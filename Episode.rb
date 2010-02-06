@@ -28,7 +28,13 @@ class Episode < Pathname
       original_name
     end
   end
-    
+
+  def rename
+    Dir.chdir(dirname) do
+      super(new_name)
+    end
+  end
+
   def renamed?
     false
   end
