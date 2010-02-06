@@ -18,4 +18,13 @@ class Episode < Pathname
   def new_name
     @new_name ||= original_name.gsub(/(.)./, '\1')
   end
+    
+  def status
+    renamed? ? "✔" : ""
+  end
+  
+  private
+  def renamed?
+    false
+  end
 end
