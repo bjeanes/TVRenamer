@@ -1,4 +1,4 @@
-# NSURL.rb
+# NSURL_ext.rb
 # TVRenamer
 #
 # Created by Bodaniel Jeanes on 5/02/10.

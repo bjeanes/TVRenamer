@@ -10,5 +10,9 @@ class NSObject
     value
   end
   
+  def blank?
+    nil? || self == ""
+  end
+  
   alias with returning
 end

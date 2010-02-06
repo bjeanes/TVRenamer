@@ -1,4 +1,4 @@
-# Pathname.rb
+# Pathname_ext.rb
 # TVRenamer
 #
 # Created by Bodaniel Jeanes on 5/02/10.
