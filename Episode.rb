@@ -54,10 +54,12 @@ class Episode < Pathname
     end
     
     def filename_format
+      format = "%s - %dx%02d"
+    
       if name?
-        "%s - %sx%s - %s#{extname}"
+        "#{format} - %s#{extname}"
       else
-        "%s - %sx%s#{extname}"
+        "#{format}#{extname}"
       end
     end
     
