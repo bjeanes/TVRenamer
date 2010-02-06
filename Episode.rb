@@ -30,9 +30,11 @@ class Episode < Pathname
   end
 
   def rename
-    Dir.chdir(dirname) do
-      super(new_name)
-      renamed!
+    if name_changed?
+      Dir.chdir(dirname) do
+        super(new_name)
+        renamed!
+      end
     end
   end
 
@@ -57,6 +59,10 @@ class Episode < Pathname
       else
         "%s - %sx%s#{extname}"
       end
+    end
+    
+    def name_changed?
+      new_name != original_name
     end
     
     def renamed!
