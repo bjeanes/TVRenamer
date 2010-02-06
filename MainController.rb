@@ -10,6 +10,7 @@ class MainController < NSWindowController
   def perform_rename(sender)
     file_list.arrangedObjects.each do |episode|
       episode.rename
+      file_list.rearrangeObjects
     end
   end
 end
