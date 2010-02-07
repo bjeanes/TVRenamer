@@ -2,3 +2,5 @@
 *.pbxuser
 /build/
 .DS_Store
+/*.pem
+/appcast/

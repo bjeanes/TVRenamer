@@ -54,6 +54,8 @@
 		6C7C4EC311196AD9003E0CC8 /* MainController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C4EC211196AD9003E0CC8 /* MainController.rb */; };
 		6CAE5727111DB7C50044FDC9 /* TVParser.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6CAE5726111DB7C50044FDC9 /* TVParser.rb */; };
 		6CAE572C111DBA040044FDC9 /* Class_ext.rb in Resources */ = {isa = PBXBuildFile; fileRef = 6CAE572B111DBA040044FDC9 /* Class_ext.rb */; };
+		6CE74208111E4F410095F587 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE74207111E4F410095F587 /* Sparkle.framework */; };
+		6CE74224111E4FB20095F587 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CE74207111E4F410095F587 /* Sparkle.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -66,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6CE74224111E4FB20095F587 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 		6C7C4EC211196AD9003E0CC8 /* MainController.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = MainController.rb; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		6CAE5726111DB7C50044FDC9 /* TVParser.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TVParser.rb; sourceTree = "<group>"; };
 		6CAE572B111DBA040044FDC9 /* Class_ext.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Class_ext.rb; sourceTree = "<group>"; };
+		6CE74207111E4F410095F587 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TVRenamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVRenamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */,
+				6CE74208111E4F410095F587 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +128,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CE74207111E4F410095F587 /* Sparkle.framework */,
 				4DE3BE130D8651D900ECA448 /* MacRuby.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -414,6 +420,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/build/Debug\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -435,6 +442,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/build/Debug\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
