@@ -3,7 +3,7 @@
 # TVRenamer
 #
 # Created by Bodaniel Jeanes on 3/02/10.
-# Copyright Mocra 2010. All rights reserved.
+# Copyright Bodaniel Jeanes 2010. All rights reserved.
 #
 
 $:.map! { |x| x.sub(/^\/Library\/Frameworks/, NSBundle.mainBundle.privateFrameworksPath) }

@@ -2,7 +2,7 @@
 # TVRenamer
 #
 # Created by Bodaniel Jeanes on 5/02/10.
-# Copyright 2010 Mocra. All rights reserved.
+# Copyright 2010 Bodaniel Jeanes. All rights reserved.
 
 class NSObject
   def returning(value, &block)
