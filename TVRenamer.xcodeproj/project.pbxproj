@@ -225,6 +225,7 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				172754B4107597CF00D0347B /* CopyFiles */,
+				6CE74231111E631E0095F587 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -305,6 +306,19 @@
 			shellScript = "# The macruby_deploy command-line tool with the --compile argument will compile every Ruby source file of your .app into machine code. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --compile \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
 		};
 		4D1A51A410A4FF640046A98A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# The macruby_deploy command-line tool with the --embed argument will make sure the MacRuby framework will be embedded in your .app. Default options will be used. Pass the -h option to get more information.\nPATH=\"$PATH:/usr/local/bin\" macruby_deploy --embed \"$TARGET_BUILD_DIR/$PROJECT_NAME.app\"";
+		};
+		6CE74231111E631E0095F587 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
