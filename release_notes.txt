@@ -1,3 +1,9 @@
+h1. <span>2010-02-07</span> Release 0.1.1
+
+h2. Bundling MacRuby
+
+* This version should now work on systems without MacRuby (but I don't have another Mac to test this)
+
 h1. <span>2010-02-07</span> Release 0.1.0
 
 h2. Initial release
@@ -8,7 +14,7 @@ h3. Features
 * Directories recursively followed to add common video formats
 * All files in the list get successfully renamed from old name to new name
 
-h4. Bugs / Known Problems / To do
+h3. Bugs / Known Problems / To do
 
 * Not all common downloaded TV Show formats parsed correctly
 * It will rename files it does not recognize (so make sure you remove them from the file list)
